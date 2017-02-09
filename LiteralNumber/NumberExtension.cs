@@ -7,7 +7,7 @@ namespace System
 {
 	public static class NumberExtension
 	{
-		private static LiteralNumber GetWords(decimal number)
+		private static LiteralNumber GetWords(decimal number, bool isMoney)
 		{
 			if (Math.Abs(number) > 999999999999999999M)
 			{
@@ -33,9 +33,16 @@ namespace System
 				words.Add(_units[0]);
 			}
 			decimal decPart = Math.Truncate((number - intPart) * 1000); //on se limite à 3 chiffres après la virgule
-			while (decPart % 10 == 0 && decPart > 0)
+			if (isMoney)
 			{
-				decPart /= 10;
+				decPart /= 10; //on ne garde que deux chiffres après la virgule (centimes)
+			}
+			else
+			{
+				while (decPart % 10 == 0 && decPart > 0)
+				{
+					decPart /= 10;
+				}
 			}
 			decimal temp = intPart;
 			decimal[] parts = new decimal[6]; //6 parties de 3 chiffres = Million de milliards
@@ -174,7 +181,7 @@ namespace System
 		}
 		public static string ToWord(this decimal number, LiteralNumberFormat format)
 		{
-			return GetWords(number).ToString(format);
+			return GetWords(number, format == LiteralNumberFormat.Money).ToString(format);
 		}
 		public static string ToWord(this sbyte number, LiteralNumberFormat format)
 		{
@@ -229,7 +236,7 @@ namespace System
 						ret += IntegralPart.Replace(' ', '-') + (!string.IsNullOrWhiteSpace(DecimalPart) ? " virgule " + DecimalPart.Replace(' ', '-') : "");
 						break;
 					case LiteralNumberFormat.Money:
-						ret += string.Format("{0} euro{1}", IntegralPart, integralPart > 0 ? "s" : "") + ((!string.IsNullOrWhiteSpace(DecimalPart) ? string.Format(" et {0} centime{1}", DecimalPart, decimalPart > 0 ? "s" : "") : ""));
+						ret += string.Format("{0} euro{1}", IntegralPart, Math.Abs(integralPart) > 1 ? "s" : "") + ((!string.IsNullOrWhiteSpace(DecimalPart) ? string.Format(" et {0} centime{1}", DecimalPart, Math.Abs(decimalPart) > 1 ? "s" : "") : ""));
 						break;
 					default:
 						break;
