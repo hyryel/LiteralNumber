@@ -147,46 +147,112 @@ namespace System
 		private static string[] _units = new[] { "zéro", "un", "deux", "trois", "quatre", "cinq", "six", "sept", "huit", "neuf", "dix", "onze", "douze", "treize", "quatorze", "quinze", "seize" };
 		private static string[] _tenth = new[] { "", "", "vingt", "trente", "quarante", "cinquante", "soixante" };
 		private static string[] _separators = new[] { "", "mille", "million", "milliard", "mille", "million" };
+		/// <summary>
+		/// Retourne le nombre en lettre
+		/// </summary>
+		/// <param name="number">Le nombre à transcrire</param>
+		/// <param name="format">Le format souhaité</param>
+		/// <returns></returns>
 		public static string ToWord(this int number, LiteralNumberFormat format)
 		{
 			return Convert.ToDecimal(number).ToWord(format);
 		}
+		/// <summary>
+		/// Retourne le nombre en lettre
+		/// </summary>
+		/// <param name="number">Le nombre à transcrire</param>
+		/// <param name="format">Le format souhaité</param>
+		/// <returns></returns>
 		public static string ToWord(this short number, LiteralNumberFormat format)
 		{
 			return Convert.ToDecimal(number).ToWord(format);
 		}
+		/// <summary>
+		/// Retourne le nombre en lettre
+		/// </summary>
+		/// <param name="number">Le nombre à transcrire</param>
+		/// <param name="format">Le format souhaité</param>
+		/// <returns></returns>
 		public static string ToWord(this long number, LiteralNumberFormat format)
 		{
 			return Convert.ToDecimal(number).ToWord(format);
 		}
+		/// <summary>
+		/// Retourne le nombre en lettre
+		/// </summary>
+		/// <param name="number">Le nombre à transcrire</param>
+		/// <param name="format">Le format souhaité</param>
+		/// <returns></returns>
 		public static string ToWord(this uint number, LiteralNumberFormat format)
 		{
 			return Convert.ToDecimal(number).ToWord(format);
 		}
+		/// <summary>
+		/// Retourne le nombre en lettre
+		/// </summary>
+		/// <param name="number">Le nombre à transcrire</param>
+		/// <param name="format">Le format souhaité</param>
+		/// <returns></returns>
 		public static string ToWord(this ushort number, LiteralNumberFormat format)
 		{
 			return Convert.ToDecimal(number).ToWord(format);
 		}
+		/// <summary>
+		/// Retourne le nombre en lettre
+		/// </summary>
+		/// <param name="number">Le nombre à transcrire</param>
+		/// <param name="format">Le format souhaité</param>
+		/// <returns></returns>
 		public static string ToWord(this ulong number, LiteralNumberFormat format)
 		{
 			return Convert.ToDecimal(number).ToWord(format);
 		}
+		/// <summary>
+		/// Retourne le nombre en lettre
+		/// </summary>
+		/// <param name="number">Le nombre à transcrire</param>
+		/// <param name="format">Le format souhaité</param>
+		/// <returns></returns>
 		public static string ToWord(this float number, LiteralNumberFormat format)
 		{
 			return Convert.ToDecimal(number).ToWord(format);
 		}
+		/// <summary>
+		/// Retourne le nombre en lettre
+		/// </summary>
+		/// <param name="number">Le nombre à transcrire</param>
+		/// <param name="format">Le format souhaité</param>
+		/// <returns></returns>
 		public static string ToWord(this double number, LiteralNumberFormat format)
 		{
 			return Convert.ToDecimal(number).ToWord(format);
 		}
+		/// <summary>
+		/// Retourne le nombre en lettre
+		/// </summary>
+		/// <param name="number">Le nombre à transcrire</param>
+		/// <param name="format">Le format souhaité</param>
+		/// <returns></returns>
 		public static string ToWord(this decimal number, LiteralNumberFormat format)
 		{
 			return GetWords(number, format == LiteralNumberFormat.Money).ToString(format);
 		}
+		/// <summary>
+		/// Retourne le nombre en lettre
+		/// </summary>
+		/// <param name="number">Le nombre à transcrire</param>
+		/// <param name="format">Le format souhaité</param>
+		/// <returns></returns>
 		public static string ToWord(this sbyte number, LiteralNumberFormat format)
 		{
 			return Convert.ToDecimal(number).ToWord(format);
 		}
+		/// <summary>
+		/// Retourne le nombre en lettre
+		/// </summary>
+		/// <param name="number">Le nombre à transcrire</param>
+		/// <param name="format">Le format souhaité</param>
+		/// <returns></returns>
 		public static string ToWord(this byte number, LiteralNumberFormat format)
 		{
 			return Convert.ToDecimal(number).ToWord(format);
@@ -246,8 +312,17 @@ namespace System
 		}
 		public enum LiteralNumberFormat
 		{
+			/// <summary>
+			/// Format de nombre normal (ex : cent dix-huit virgule deux)
+			/// </summary>
 			Normal,
+			/// <summary>
+			/// Format suivant la recommandation de 1990 (ex : cent-dix-huit virgule deux)
+			/// </summary>
 			Recommandation1990,
+			/// <summary>
+			/// Format monétaire (ex : cent dix-huit euros vingt centimes)
+			/// </summary>
 			Money
 		}
 	}
