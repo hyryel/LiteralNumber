@@ -7,14 +7,14 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("LiteralNumber")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Permet de transcrire les nombres en lettres.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("LiteralNumber")]
+[assembly: AssemblyProduct("Literal Number")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
-[assembly: NeutralResourcesLanguage("en")]
+[assembly: NeutralResourcesLanguage("fr-FR")]
 
 // Version information for an assembly consists of the following four values:
 //
