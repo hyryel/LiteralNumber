@@ -33,17 +33,27 @@ namespace System
 				words.Add(_units[0]);
 			}
 			decimal decPart = Math.Truncate((number - intPart) * 1000); //on se limite à 3 chiffres après la virgule
+			List<string> leadingZero = new List<string>();
 			if (isMoney)
 			{
 				decPart /= 10; //on ne garde que deux chiffres après la virgule (centimes)
 			}
 			else
 			{
+				if (decPart < 100)
+				{
+					leadingZero.Add(_units[0]);
+				}
+				if (decPart < 10)
+				{
+					leadingZero.Add(_units[0]);
+				}
 				while (decPart % 10 == 0 && decPart > 0)
 				{
 					decPart /= 10;
 				}
 			}
+
 			decimal temp = intPart;
 			decimal[] parts = new decimal[6]; //6 parties de 3 chiffres = Million de milliards
 			int idx = 0;
@@ -77,7 +87,7 @@ namespace System
 			ret.IsNegative = neg;
 			if (decPart > 0)
 			{
-				ret.DecimalPart = GroupToMoneyWord(decPart);
+				ret.DecimalPart = (leadingZero.Count> 0 ? string.Join(" ", leadingZero) + " " : "" ) + GroupToMoneyWord(decPart);
 			}
 			return ret;
 		}

@@ -35,7 +35,7 @@ namespace TestConsole
 					Console.SetCursorPosition(0, 1);
 					Console.Write(new string(' ', rep.Length));
 					Console.SetCursorPosition(0, 1);
-					rep = $"{dec} : {dec.ToWord(NumberExtension.LiteralNumberFormat.Money)}";
+					rep = $"{dec} : {dec.ToWord(NumberExtension.LiteralNumberFormat.Normal)}";
 					Console.WriteLine(rep);
 				}
 			}

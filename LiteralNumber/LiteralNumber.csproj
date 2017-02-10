@@ -35,6 +35,22 @@
     <WarningLevel>4</WarningLevel>
     <DocumentationFile>bin\Release\LiteralNumber.XML</DocumentationFile>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'DebugNuGet|AnyCPU'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\LiteralNumber.NuGet.package\lib\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>..\LiteralNumber.NuGet.package\lib\LiteralNumber.XML</DocumentationFile>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'ReleaseNuGet|AnyCPU'">
+    <OutputPath>..\LiteralNumber.NuGet.package\lib\</OutputPath>
+    <DocumentationFile>..\LiteralNumber.NuGet.package\lib\LiteralNumber.XML</DocumentationFile>
+    <Optimize>true</Optimize>
+    <DefineConstants>TRACE</DefineConstants>
+  </PropertyGroup>
   <ItemGroup>
     <None Include="project.json" />
     <!-- A reference to the entire .NET Framework is automatically included -->

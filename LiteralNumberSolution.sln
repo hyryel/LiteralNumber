@@ -7,20 +7,40 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiteralNumber", "LiteralNum
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestConsole", "TestConsole\TestConsole.csproj", "{DB467FBC-4A55-4045-BB9A-9B39334C5C40}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LiteralNumber.NuGet.package", "LiteralNumber.NuGet.package\LiteralNumber.NuGet.package.csproj", "{0451BAEF-DF2E-4B98-8644-94EE9415E389}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
+		DebugNuGet|Any CPU = DebugNuGet|Any CPU
 		Release|Any CPU = Release|Any CPU
+		ReleaseNuGet|Any CPU = ReleaseNuGet|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
 		{D65B50E7-9011-4DAE-8CE2-10B987D39000}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D65B50E7-9011-4DAE-8CE2-10B987D39000}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D65B50E7-9011-4DAE-8CE2-10B987D39000}.DebugNuGet|Any CPU.ActiveCfg = DebugNuGet|Any CPU
+		{D65B50E7-9011-4DAE-8CE2-10B987D39000}.DebugNuGet|Any CPU.Build.0 = DebugNuGet|Any CPU
 		{D65B50E7-9011-4DAE-8CE2-10B987D39000}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D65B50E7-9011-4DAE-8CE2-10B987D39000}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D65B50E7-9011-4DAE-8CE2-10B987D39000}.ReleaseNuGet|Any CPU.ActiveCfg = ReleaseNuGet|Any CPU
+		{D65B50E7-9011-4DAE-8CE2-10B987D39000}.ReleaseNuGet|Any CPU.Build.0 = ReleaseNuGet|Any CPU
 		{DB467FBC-4A55-4045-BB9A-9B39334C5C40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DB467FBC-4A55-4045-BB9A-9B39334C5C40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB467FBC-4A55-4045-BB9A-9B39334C5C40}.DebugNuGet|Any CPU.ActiveCfg = DebugNuGet|Any CPU
+		{DB467FBC-4A55-4045-BB9A-9B39334C5C40}.DebugNuGet|Any CPU.Build.0 = DebugNuGet|Any CPU
 		{DB467FBC-4A55-4045-BB9A-9B39334C5C40}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DB467FBC-4A55-4045-BB9A-9B39334C5C40}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DB467FBC-4A55-4045-BB9A-9B39334C5C40}.ReleaseNuGet|Any CPU.ActiveCfg = ReleaseNuGet|Any CPU
+		{DB467FBC-4A55-4045-BB9A-9B39334C5C40}.ReleaseNuGet|Any CPU.Build.0 = ReleaseNuGet|Any CPU
+		{0451BAEF-DF2E-4B98-8644-94EE9415E389}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0451BAEF-DF2E-4B98-8644-94EE9415E389}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0451BAEF-DF2E-4B98-8644-94EE9415E389}.DebugNuGet|Any CPU.ActiveCfg = DebugNuGet|Any CPU
+		{0451BAEF-DF2E-4B98-8644-94EE9415E389}.DebugNuGet|Any CPU.Build.0 = DebugNuGet|Any CPU
+		{0451BAEF-DF2E-4B98-8644-94EE9415E389}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0451BAEF-DF2E-4B98-8644-94EE9415E389}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0451BAEF-DF2E-4B98-8644-94EE9415E389}.ReleaseNuGet|Any CPU.ActiveCfg = ReleaseNuGet|Any CPU
+		{0451BAEF-DF2E-4B98-8644-94EE9415E389}.ReleaseNuGet|Any CPU.Build.0 = ReleaseNuGet|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
